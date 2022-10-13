@@ -380,5 +380,14 @@
         <Setter Property="UnselectedTabColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray950}}" />
         <Setter Property="SelectedTabColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
     </Style>
+    
+    <!--custom styles start here-->
+    <Style x:Key="planetCard" TargetType="Frame">
+        <Setter Property="CornerRadius" Value="6"></Setter>
+        <Setter Property="Background" Value="{StaticResource bgDarkBrush}"></Setter>
+        <Setter Property="HasShadow" Value="True"></Setter>
+        <Setter Property="HeightRequest" Value="202.5"></Setter>
+    </Style>
+    
 
 </ResourceDictionary>
