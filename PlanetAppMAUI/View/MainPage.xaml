@@ -1,22 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PlanetAppMAUI.MainPage">
+             x:Class="PlanetAppMAUI.MainPage"
+             Title="Main Page">
     <!--Top element--> 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+        <Image Source="{Binding Picture.url}" Grid.RowSpan="2" Grid.ColumnSpan="2" Aspect="Fill"/>
 
         <!--Navbar-->
         <Grid x:Name="TopBar">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="60" />
             </Grid.ColumnDefinitions>
+            
+            <Label Grid.Column="1" Text="Planets" FontSize="45" HorizontalOptions="Center"/>
 
-            <ImageButton Grid.Column="1">
+            <ImageButton Grid.Column="2" Clicked="OnInfoButton_Clicked">
                 <ImageButton.Source>
                     <FontImageSource FontFamily="FontAwSolid" Glyph="&#xf05a;" Color="White" />
                 </ImageButton.Source>
@@ -30,27 +35,119 @@
         </Grid>
         
         <!--Main-->
-        <Grid Grid.Row="1">
+            <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="360" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <ScrollView Grid.Column="1">
+                <VerticalStackLayout>
+                    <Frame Style="{StaticResource planetCard}">
+                    <Grid>
+                        <Image
+                        Source="earth.jpg"
+                        HeightRequest="200"
+                        HorizontalOptions="Center" />
+                        <Label
+                        Text="Earth"
+                        SemanticProperties.HeadingLevel="Level1"
+                        FontSize="32"
+                        HorizontalOptions="Center" />
+                    </Grid>
+                </Frame>
                 <Frame Style="{StaticResource planetCard}">
                     <Grid>
                         <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+                        Source="jupiter.jpg"
+                        HeightRequest="200"
+                        HorizontalOptions="Center" />
                         <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+                        Text="Jupiter"
+                        SemanticProperties.HeadingLevel="Level1"
+                        FontSize="32"
+                        HorizontalOptions="Center" />
                     </Grid>
                 </Frame>
+                <Frame Style="{StaticResource planetCard}">
+                    <Grid>
+                        <Image
+                        Source="mars.jpg"
+                        HeightRequest="200"
+                        HorizontalOptions="Center" />
+                        <Label
+                        Text="Mars"
+                        SemanticProperties.HeadingLevel="Level1"
+                        FontSize="32"
+                        HorizontalOptions="Center" />
+                    </Grid>
+                </Frame>
+                <Frame Style="{StaticResource planetCard}">
+                    <Grid>
+                        <Image
+                        Source="mercury.jpg"
+                        HeightRequest="200"
+                        HorizontalOptions="Center" />
+                        <Label
+                        Text="Mercury"
+                        SemanticProperties.HeadingLevel="Level1"
+                        FontSize="32"
+                        HorizontalOptions="Center" />
+                    </Grid>
+                </Frame>
+                <Frame Style="{StaticResource planetCard}">
+                    <Grid>
+                        <Image
+                        Source="neptune.jpg"
+                        HeightRequest="200"
+                        HorizontalOptions="Center" />
+                        <Label
+                        Text="Neptune"
+                        SemanticProperties.HeadingLevel="Level1"
+                        FontSize="32"
+                        HorizontalOptions="Center" />
+                    </Grid>
+                </Frame>
+                <Frame Style="{StaticResource planetCard}">
+                    <Grid>
+                        <Image
+                        Source="saturn.jpg"
+                        HeightRequest="200"
+                        HorizontalOptions="Center" />
+                        <Label
+                        Text="Saturn"
+                        SemanticProperties.HeadingLevel="Level1"
+                        FontSize="32"
+                        HorizontalOptions="Center" />
+                    </Grid>
+                </Frame>
+                <Frame Style="{StaticResource planetCard}">
+                    <Grid>
+                        <Image
+                        Source="uranus.jpg"
+                        HeightRequest="200"
+                        HorizontalOptions="Center" />
+                        <Label
+                        Text="Urnaus"
+                        SemanticProperties.HeadingLevel="Level1"
+                        FontSize="32"
+                        HorizontalOptions="Center" />
+                    </Grid>
+                </Frame>
+                    <Frame Style="{StaticResource planetCard}">
+                        <Grid>
+                            <Image
+                            Source="venus.jpg"
+                            HeightRequest="200"
+                            HorizontalOptions="Center" />
+                            <Label
+                            Text="Venus"
+                            SemanticProperties.HeadingLevel="Level1"
+                            FontSize="32"
+                            HorizontalOptions="Center" />
+                        </Grid>
+                    </Frame>
+                </VerticalStackLayout>
             </ScrollView>
         </Grid>
     </Grid>

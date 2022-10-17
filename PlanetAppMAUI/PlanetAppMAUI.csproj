@@ -50,6 +50,20 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\FontAwesomeSolid.otf" />
+	  <None Remove="Resources\Images\Earth.jpg" />
+	  <None Remove="Resources\Images\Jupiter.jpg" />
+	  <None Remove="Resources\Images\Mars.jpg" />
+	  <None Remove="Resources\Images\Mercury.jpg" />
+	  <None Remove="Resources\Images\Neptune.jpg" />
+	  <None Remove="Resources\Images\Saturn.jpg" />
+	  <None Remove="Resources\Images\Uranus.jpg" />
+	  <None Remove="Resources\Images\Venus.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="View\InfoPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

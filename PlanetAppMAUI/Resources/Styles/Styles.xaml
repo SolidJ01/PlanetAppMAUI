@@ -384,10 +384,18 @@
     <!--custom styles start here-->
     <Style x:Key="planetCard" TargetType="Frame">
         <Setter Property="CornerRadius" Value="6"></Setter>
-        <Setter Property="Background" Value="{StaticResource bgDarkBrush}"></Setter>
+        <Setter Property="Background" Value="#000000"></Setter>
+        <Setter Property="HasShadow" Value="True"></Setter>
+        <Setter Property="HeightRequest" Value="202.5"></Setter>
+        <Setter Property="Margin" Value="0,0,0,20"></Setter>
+    </Style>
+
+    <Style x:Key="infoCard" TargetType="Frame">
+        <Setter Property="CornerRadius" Value="6"></Setter>
+        <Setter Property="Background" Value="{StaticResource bgDark}"></Setter>
         <Setter Property="HasShadow" Value="True"></Setter>
         <Setter Property="HeightRequest" Value="202.5"></Setter>
     </Style>
-    
+
 
 </ResourceDictionary>

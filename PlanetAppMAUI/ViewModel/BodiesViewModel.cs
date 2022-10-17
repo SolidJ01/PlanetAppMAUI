@@ -14,9 +14,5 @@ namespace PlanetAppMAUI.ViewModel
 
         //public string URLs 
 
-        public BodiesViewModel()
-        {
-            _ = potdService.Get();
-        }
     }
 }

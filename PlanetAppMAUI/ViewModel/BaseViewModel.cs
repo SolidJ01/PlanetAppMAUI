@@ -10,15 +10,15 @@ namespace PlanetAppMAUI.ViewModel
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged = (sender, e) => {};
 
         //public void OnPropertyChanged([CallerMemberName] string name = null)
         //{
         //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         //}
-        public void OnPropertyChanged(Object property)
+        public void OnPropertyChanged(string property)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(property)));
+            PropertyChanged(this, new PropertyChangedEventArgs(property));
         }
     }
 }
